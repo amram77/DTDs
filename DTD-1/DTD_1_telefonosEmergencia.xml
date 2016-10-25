@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE agenda [
 <!ELEMENT agenda (contacto)*>
 <!ELEMENT contacto (nombre , telefonoFijo* , telefonoMovil+)>
@@ -10,11 +10,15 @@
   <contacto>
     <nombre>Ayuntamiento</nombre>
     <telefonoFijo>010</telefonoFijo>
+    <telefonoMovil>Desconocido</telefonoMovil>
   </contacto>
   <contacto>
     <nombre>Emergencias</nombre>
     <telefonoFijo>112 (Unión Europea)</telefonoFijo>
-    <telefonoMovil>Desconocido</telefonoMovil>
     <telefonoFijo>911 (Estados Unidos)</telefonoFijo>
+    <telefonoMovil>Desconocido</telefonoMovil>
+
   </contacto>
 </agenda>
+
+<!-- El elemento contacto debe tener al menos un elemento teléfono movil y el orden de sus elementos a de ser nombre, telefonoFijo y telefonoMovil-->
