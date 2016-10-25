@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE sistemaSolar [
 <!ELEMENT sistemaSolar (cuerpo)*>
 <!ELEMENT cuerpo (planeta | satelite | asteroide)+>
@@ -10,6 +10,8 @@
   <cuerpo>
     <planeta>Tierra</planeta>
     <satelite>Luna</satelite>
+    <asteroide>Ceres</asteroide>
   </cuerpo>
-  <asteroide>Ceres</asteroide>
 </sistemaSolar>
+
+<!-- El elemento sistemaSolar no puede estar formado por el elemento asteroide. -->
