@@ -1,9 +1,10 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE colores [
 <!ELEMENT colores (color)*>
 <!ELEMENT color (#PCDATA)>
 ]>
-<colores><color>azul marino</color>
- negro
+<colores>
+  <color>azul marino</color>
   <color>amarillo</color>
 </colores>
+<!-- El elemento colores está definido para contener 0, 1 o varias etiquetas color, no datos de tipo carácter -->
