@@ -1,6 +1,9 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE contabilidad [
-<!ELEMENT contabilidad (ingreso | gasto)*>
+<!ELEMENT contabilidad (apunte)*>
+<!ELEMENT apunte ((ingreso | gasto), fecha, cantidad, concepto)>
+<!ELEMENT ingreso EMPTY>
+<!ELEMENT gasto EMPTY>
 <!ELEMENT fecha (#PCDATA)>
 <!ELEMENT cantidad (#PCDATA)>
 <!ELEMENT concepto (#PCDATA)>
@@ -19,3 +22,6 @@
     <concepto>Recibo luz</concepto>
   </apunte>
 </contabilidad>
+
+<!-- Modificamos el DTD para que el elmento contabilidad este formado por 0, 1 o varios elementos apunte. A su vez el elemento apunte estará formado por
+un elemento ingreso o gasto (que son elementos vacíos) y por los elementos fecha, cantidad y concepto.-->
