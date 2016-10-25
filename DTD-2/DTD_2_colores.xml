@@ -1,6 +1,8 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE colores [
 <!ELEMENT colores (color)*>
+<!ELEMENT color (nombreSvg, codigo)>
+<!ELEMENT codigo (rgb | cmyk)>
 <!ELEMENT nombreSvg (#PCDATA)>
 <!ELEMENT rgb (#PCDATA)>
 <!ELEMENT cmyk (#PCDATA)>
@@ -19,3 +21,6 @@
     </codigo>
   </color>
 </colores>
+
+<!-- En el DTD definimos el elemento color para que este formado por los elementos nombreSVg y codigo. También definimos el elemento codigo para que esté
+formado por el elemento rgb o el elemento cmyk -->
