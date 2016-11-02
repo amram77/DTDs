@@ -1,10 +1,11 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mensajes [
-<!ELEMENT mensajes (mensaje)>
+<!ELEMENT mensajes (mensaje)*>
+<!ELEMENT mensaje (de, para, hora, texto)>
 <!ELEMENT de (#PCDATA)>
 <!ELEMENT para (#PCDATA)>
 <!ELEMENT hora (#PCDATA)>
-<!ELEMENT texto (#PCDATA)>
+<!ELEMENT texto ANY>
 <!ELEMENT strong (#PCDATA)>
 ]>
 <mensajes>
@@ -21,3 +22,6 @@
     <texto>Aquí, aprendiendo <strong>XML</strong></texto>
   </mensaje>
 </mensajes>
+
+<!-- Declaramos el elemento mensaje. La declaración del elemento texto es errónea, la cambiamos por ANY. Cambiamos la declaración del elemento mensajes para
+que pueda contener varios elementos mensaje -->
