@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE cuadros [
 <!ELEMENT cuadros (cuadro)*>
 <!ELEMENT cuadro EMPTY>
@@ -6,6 +6,9 @@
 <!ATTLIST cuadro autor CDATA #REQUIRED>
 ]>
 <cuadros>
-  <cuadro titulo="Adán y Eva" autor="Alberto Durero"/>
-  <cuadro autor="Lucas Cranach, el viejo" titulo="Adán y Eva"/>
+  <cuadro titulo="Adán-y-Eva" autor="Alberto Durero"/>
+  <cuadro autor="Lucas Cranach, el viejo" titulo="AdányEva"/>
 </cuadros>
+
+<!-- Adán y Eva no es válido como valor para título, ya que según el DTD este atributo es un ID y por tanto no puede contener espacios en blanco. Cambiamos los
+valores para título teniendo en cuenta que el valor de un ID debe ser único. -->
