@@ -1,6 +1,9 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE persona [
 <!ELEMENT persona EMPTY>
 <!ATTLIST persona nombre CDATA #IMPLIED>
 ]>
-<persona dni="03141592E"/>
+<persona />
+
+<!-- El elemento persona tiene como atributo nombre, no dni. Como es opcional y teniendo en cuenta que el nombre de una persona no es una sucesión de
+números, la mejor solución es eliminar el atributo. -->
