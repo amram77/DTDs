@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE paises [
-<!ELEMENT pais (nombre , unionEuropea , otan)>
-<!ELEMENT nombre EMPTY>
+<!ELEMENT paises (pais)*>
+<!ELEMENT pais (nombre , unionEuropea? , otan?)>
+<!ELEMENT nombre (#PCDATA)>
 <!ELEMENT unionEuropea EMPTY>
 <!ELEMENT otan EMPTY>
 ]>
@@ -20,3 +21,6 @@
     <unionEuropea/>
   </pais>
 </paises>
+
+<!-- Definimos el elemento paises, que podrá contener varios elementos pais. Cambiamos los elementos unionEuropea y otan a no obligatorios. El elemento
+nombre no puede ser vacío, por tanto lo cambiamos a PCDATA. -->
