@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE favoritos [
-  <!ELEMENT favoritos (marcador)> 
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE marcadores [
+  <!ELEMENT marcadores (marcador)*> 
   <!ELEMENT marcador (nombre, uri)>
   <!ELEMENT nombre (#PCDATA)>
   <!ELEMENT uri (#PCDATA)>
@@ -17,3 +17,5 @@
   </marcador>
 </marcadores>
 
+<!-- Como no existe el elemento favoritos cambiamos el DOCTYPE y lo redefinimos como marcadores. Además marcadores podrá contneer 0, 1 o varios
+ elementos marcador -->
