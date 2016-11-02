@@ -1,7 +1,7 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE vuelos [
   <!ELEMENT vuelos (vuelo*)>
-  <!ELEMENT vuelo (origen, destino)>
+  <!ELEMENT vuelo ((origen , destino) | (destino , origen))>
   <!ELEMENT origen (#PCDATA)>
   <!ELEMENT destino (#PCDATA)>
 ]>
@@ -17,3 +17,5 @@
   </vuelo>
 </vuelos>
 
+<!-- Cambiamos el modelo de contelnido del elemento vuelo para permitir que el orden de los elementos destino y origen sea indiferente, pero ambos sean
+obligatorios -->
