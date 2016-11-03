@@ -1,9 +1,9 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE cosasPorHacer [
-<!ELEMENT cosasPorHacer (cosa)>
-<!ELEMENT cosa EMPTY>
+<!ELEMENT cosasPorHacer (cosa)*>
+<!ELEMENT cosa (#PCDATA)>
 <!ATTLIST cosa fecha CDATA #REQUIRED>
-<!ATTLIST cosa asunto CDATA #REQUIRED>
+<!ATTLIST cosa asunto CDATA #IMPLIED>
 <!ATTLIST cosa fechaLimite CDATA #REQUIRED>
 ]>
 <cosasPorHacer>
@@ -12,3 +12,6 @@
   <cosa fecha="21 de febrero de 2012" fechaLimite="5 de marzo de 2012">
   Preparar tema XSLT</cosa>
 </cosasPorHacer>
+
+<!-- El elemento cosasPorHacer debe poder contener más de un elemeneto cosa, lo cambiamos. El elemento cosa no es un elemento vacío, también lo cambiamos.
+EL atributo asunto no aparece por ninguna parte en el documento y está puesto como requerido, cambiamos esto. -->
