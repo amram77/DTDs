@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE futbol [
 <!ELEMENT futbol (jugador | equipo)*>
 <!ELEMENT jugador EMPTY>
@@ -13,6 +13,10 @@
   <jugador nombre="Edison Arantes do Nascimento" codigo="ean"/>
   <jugador nombre="Diego Armando Maradona" codigo="dam"/>
   <jugador nombre="Johan Cruyff" codigo="jc"/>
-  <equipo nombre="Società Sportiva Calcio Napoli" jugadores="Maradona"/>
-  <equipo nombre="Futbol Club Barcelona" jugadores="Cruyff, Maradona"/>
+  <equipo nombre="Società Sportiva Calcio Napoli" jugadores="dam"/>
+  <equipo nombre="Futbol Club Barcelona" jugadores="jc dam"/>
 </futbol>
+
+<!--El atributo jugadores debe hacer referencia a un identificador. Tenemos uno, el atributo código que está definido como ID y que da la casualidad que además
+está definido para que forme parte del elemento jugador que además contiene el atributo nombre, que contiene el nombre del jugador. Con lo cual es lógico
+que el atributo jugadores tome el valor de codigo para referirse a ellos. -->
