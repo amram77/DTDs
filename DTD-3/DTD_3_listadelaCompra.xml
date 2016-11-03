@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE listaCompra [
 <!ELEMENT listaCompra (item)*>
 <!ELEMENT item EMPTY>
@@ -6,6 +6,9 @@
 <!ATTLIST item cantidad CDATA #REQUIRED>
 ]>
 <listaCompra>
-  <leche cantidad="12 litros"/>
-  <pan cantidad="3 barras de cuarto"/>
+  <item nombre="leche" cantidad="12 litros"/>
+  <item nombre="pan" cantidad="3 barras de cuarto"/>
 </listaCompra>
+
+<!-- No están definidos lo elemento leche ni pan para listaCompra, en su lugar lo está el elemento Item. Este elemento require de dos atributos, nombre y cantidad.
+Falta el atributo nombre, al cual daremos los valores leche y pan. -->
