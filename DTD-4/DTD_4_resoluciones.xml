@@ -1,12 +1,17 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE resoluciones [
-<!ELEMENT resoluciones EMPTY>
-<!ATTLIST resoluciones nombre NMTOKEN #REQUIRED>
-<!ATTLIST resoluciones alto CDATA #REQUIRED>
-<!ATTLIST resoluciones ancho CDATA #REQUIRED>
+<!ELEMENT resoluciones (resolucion)*>
+<!ELEMENT resolucion EMPTY>
+<!ATTLIST resolucion nombre NMTOKENS #REQUIRED>
+<!ATTLIST resolucion alto CDATA #REQUIRED>
+<!ATTLIST resolucion ancho CDATA #REQUIRED>
 ]>
 <resoluciones>
   <resolucion nombre="VGA" alto="480" ancho="640"/>
   <resolucion nombre="XGA" alto="1024" ancho="768"/>
   <resolucion nombre="HD 1080" alto="1920" ancho="1080"/>
 </resoluciones>
+
+<!-- EL elemento resoluciones no puede estar declarado como vacío, en su lugar debe poder contener varios elementos resolucion. El elemento resolucion no
+está declarado, lo declararemos como de tipo vacío. Hay que cambiar todas las declaraciones de los atributos, ya que estan definidos para el elemento
+resoluciones y deberia ser para el elemento resolucion. El atributo nombre debemos declararlo como NMTOKENS, para permitir espacios en blanco.-->
