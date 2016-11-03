@@ -1,9 +1,9 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE inventores [
-  <!ELEMENT inventores>
+  <!ELEMENT inventores (inventor)*>
   <!ELEMENT inventor EMPTY>
   <!ATTLIST inventor invento CDATA #REQUIRED>
-  <!ATTLIST inventor nombre ID #REQUIRED>
+  <!ATTLIST inventor nombre CDATA #IMPLIED>
 ]>
 <inventores>
   <inventor nombre="Robert Adler" invento="Mando a distancia" />
@@ -12,3 +12,7 @@
   <inventor invento="Fuego" />
 </inventores>
 
+<!-- El elemento inventores está mal definido, ya que debe poder contener varios elementos inventor. El elemento nombre está declarado como de tipo ID, lo que
+implica que debe ser un nombre XML válido, sin embargo en el documento vemos que el valor de nombre contiene espacios en blanco, cosa que no está permitida
+en un ID. Lo mejor es cambiarlo a un tipo PCDATA. Además está decalrado como de tipo requerido y en el documento vemos que en una ocasión no existe, por
+tanto lo lógico es declararlo como IMPLIED. -->
