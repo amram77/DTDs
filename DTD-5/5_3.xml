@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE libros SYSTEM "5_3.dtd">
+
+<libros>
+  <Libro isbn="CEM" fecha="02-03-1971" paginas="1400">
+    <Titulo>Crónicas de Elric de Melniboné</Titulo>
+    <Categoria>Literatura fantástica</Categoria>
+  </Libro>
+</libros>
