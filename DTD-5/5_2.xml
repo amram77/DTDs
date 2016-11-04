@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE libreta-direcciones [
+<!ELEMENT libreta-direcciones (entrada*)>
+<!ELEMENT entrada (nombre, direccion, telefono+, correo-e+)>
+<!ELEMENT direccion (calle, region,  codigo-postal, localidad, pais)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT telefono (#PCDATA)>
+<!ELEMENT calle (#PCDATA)>
+<!ELEMENT region (#PCDATA)>
+<!ELEMENT codigo-postal (#PCDATA)>
+<!ELEMENT localidad (#PCDATA)>
+<!ELEMENT pais (#PCDATA)>
+<!ELEMENT correo-e EMPTY>
+<!ATTLIST correo-e href CDATA #REQUIRED>
+]>
+
+<libreta-direcciones>
+  <entrada>
+    <nombre>Juan Nadie</nombre>
+    <direccion>
+      <calle>34 Plaza Vacía</calle>
+      <region>Asturias</region>
+      <codigo-postal>33203</codigo-postal>
+      <localidad>Desconocida</localidad>
+      <pais>Sin Tierra</pais>
+    </direccion>
+    <telefono>513-555-8889</telefono>
+    <correo-e href="mailto:jnadie@sincorreo.com"/>
+</entrada>
+</libreta-direcciones>
